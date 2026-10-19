@@ -1,0 +1,176 @@
+{
+  "hero/flights": {
+    "title": "Cumulus clouds from above.JPG",
+    "author": "Rillke",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Cumulus_clouds_from_above.JPG"
+  },
+  "hero/visa": {
+    "title": "DN Int'l Airport Jetstar Check-in.jpg",
+    "author": "Dragfyre",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:DN_Int%27l_Airport_Jetstar_Check-in.jpg"
+  },
+  "hero/study": {
+    "title": "Graz University-Library reading-room.jpg",
+    "author": "Dr. Marcus Gossler",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Graz_University-Library_reading-room.jpg"
+  },
+  "destinations/coxs-bazar": {
+    "title": "Cox's Bazar sea beach 01.jpg",
+    "author": "Tanweer Morshed",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Cox%27s_Bazar_sea_beach_01.jpg"
+  },
+  "destinations/dubai": {
+    "title": "Dubai Skyline mit Burj Khalifa (18241030269).jpg",
+    "author": "Tim Reckmann from Hamm, Deutschland",
+    "license": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Dubai_Skyline_mit_Burj_Khalifa_(18241030269).jpg"
+  },
+  "destinations/bangkok": {
+    "title": "Templo Wat Arun, Bangkok, Tailandia, 2013-08-22, DD 30.jpg",
+    "author": "Diego Delso",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Templo_Wat_Arun,_Bangkok,_Tailandia,_2013-08-22,_DD_30.jpg"
+  },
+  "destinations/kuala-lumpur": {
+    "title": "Petronas twin towers at night.jpg",
+    "author": "Bruce Poon",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Petronas_twin_towers_at_night.jpg"
+  },
+  "destinations/maldives": {
+    "title": "Diamonds Thudufushi Beach and Water Villas, May 2017 -03.jpg",
+    "author": "Martin Falbisoner",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Diamonds_Thudufushi_Beach_and_Water_Villas,_May_2017_-03.jpg"
+  },
+  "hotels/hotel-1": {
+    "title": "Restaurant room of Amantaka luxury Resort & Hotel in Luang Prabang Laos.jpg",
+    "author": "Basile Morin",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Restaurant_room_of_Amantaka_luxury_Resort_%26_Hotel_in_Luang_Prabang_Laos.jpg"
+  },
+  "hotels/hotel-2": {
+    "title": "Swimming pool of Khan Pool Suite in Amantaka luxury Resort & Hotel in Luang Prabang Laos.jpg",
+    "author": "Basile Morin",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Swimming_pool_of_Khan_Pool_Suite_in_Amantaka_luxury_Resort_%26_Hotel_in_Luang_Prabang_Laos.jpg"
+  },
+  "hotels/hotel-3": {
+    "title": "Lobby lounge of Amantaka Suite Amantaka luxury Resort & Hotel Luang Prabang Laos.jpg",
+    "author": "Basile Morin",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Lobby_lounge_of_Amantaka_Suite_Amantaka_luxury_Resort_%26_Hotel_Luang_Prabang_Laos.jpg"
+  },
+  "hotels/hotel-4": {
+    "title": "Canopy bed of Amantaka Suite in Amantaka luxury Resort & Hotel in Luang Prabang Laos.jpg",
+    "author": "Basile Morin",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Canopy_bed_of_Amantaka_Suite_in_Amantaka_luxury_Resort_%26_Hotel_in_Luang_Prabang_Laos.jpg"
+  },
+  "hotels/hotel-5": {
+    "title": "Eden Roc Resort Hotel Reni Beach Rhodes 29 August 2023.jpg",
+    "author": "Pjotr Mahhonin",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Eden_Roc_Resort_Hotel_Reni_Beach_Rhodes_29_August_2023.jpg"
+  },
+  "hotels/hotel-6": {
+    "title": "Twin room, Grand Hotel, Scarborough, North Yorkshire (11th June 2022) 003.jpg",
+    "author": "Mtaylor848",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Twin_room,_Grand_Hotel,_Scarborough,_North_Yorkshire_(11th_June_2022)_003.jpg"
+  },
+  "study/gb": {
+    "title": "Radcliffe Camera Oxford 2018 03.jpg",
+    "author": "Julian Herzog (Website)",
+    "license": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Radcliffe_Camera_Oxford_2018_03.jpg"
+  },
+  "study/us": {
+    "title": "Widener Library, Harvard University.jpg",
+    "author": "Kenneth C. Zirkel",
+    "license": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Widener_Library,_Harvard_University.jpg"
+  },
+  "study/ca": {
+    "title": "Toronto University College 1.jpg",
+    "author": "GoginkLobabi",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Toronto_University_College_1.jpg"
+  },
+  "study/au": {
+    "title": "SydneyUniversity MainQuadrangle panorama 270.jpg",
+    "author": "Toby Hudson",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:SydneyUniversity_MainQuadrangle_panorama_270.jpg"
+  },
+  "hero/holidays": {
+    "title": "Eriyadu Island. View from the south. Maldives.jpg",
+    "author": "Ввласенко",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Eriyadu_Island._View_from_the_south._Maldives.jpg"
+  },
+  "destinations/kathmandu": {
+    "title": "The Annapurna range from Pokhara.jpg",
+    "author": "Jmhullot",
+    "license": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Annapurna_range_from_Pokhara.jpg"
+  },
+  "destinations/singapore": {
+    "title": "ArtScience Museum, Marina Bay Sands, Singapore.jpg",
+    "author": "Basile Morin",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:ArtScience_Museum,_Marina_Bay_Sands,_Singapore.jpg"
+  },
+  "destinations/istanbul": {
+    "title": "Cappadocia Balloon Inflating Wikimedia Commons.JPG",
+    "author": "Benh LIEU SONG (Flickr)",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Cappadocia_Balloon_Inflating_Wikimedia_Commons.JPG"
+  },
+  "destinations/sajek": {
+    "title": "Sunrise at Sajek Valley.jpg",
+    "author": "Rocky Masum",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sunrise_at_Sajek_Valley.jpg"
+  },
+  "destinations/saint-martin": {
+    "title": "Saint Martin (6).jpg",
+    "author": "ROCKY",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Saint_Martin_(6).jpg"
+  },
+  "study/de": {
+    "title": "Old building of Heidelberg University.JPG",
+    "author": "Avi1111 dr. avishai teicher",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Old_building_of_Heidelberg_University.JPG"
+  },
+  "study/my": {
+    "title": "Universiti Malaya KL gate.jpg",
+    "author": "*angys*",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Universiti_Malaya_KL_gate.jpg"
+  },
+  "promos/airline": {
+    "title": "Emirates Airbus A380-861 A6-EER MUC 2015 01.jpg",
+    "author": "Julian Herzog (Website)",
+    "license": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Emirates_Airbus_A380-861_A6-EER_MUC_2015_01.jpg"
+  },
+  "promos/card": {
+    "title": "Credit-cards.jpg",
+    "author": "Lotus Head from Johannesburg, Gauteng, South Africa",
+    "license": "CC BY-SA 2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Credit-cards.jpg"
+  },
+  "promos/mobile": {
+    "title": "Black smartphone in hand (Unsplash).jpg",
+    "author": "Dennis Cortés cortes",
+    "license": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Black_smartphone_in_hand_(Unsplash).jpg"
+  }
+}
