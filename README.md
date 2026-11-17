@@ -63,6 +63,18 @@ docker compose up -d --build
 
 Open http://localhost:3000 · health check: `GET /api/health`
 
+## Live demo (GitHub Pages)
+
+The `demo` branch deploys a static, server-less build to **https://mahbub06ru4.github.io/khoozo_ota/** via `.github/workflows/pages.yml`.
+In this mode (`STATIC_EXPORT=1`) the API routes are dropped and search, visa and holiday booking run in the browser on the built-in demo data; bookings are stored in the visitor's browser. No database or paid API is needed.
+
+Build it locally:
+
+```bash
+STATIC_EXPORT=1 PAGES_BASE_PATH=/khoozo_ota npm run build   # move app/api aside first
+node scripts/flatten-export-segments.mjs out
+```
+
 ## Run locally
 
 ```bash

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { asset } from "@/lib/runtime";
 import { cn } from "@/lib/utils";
 
 export function Photo({ src, alt, className, priority }: { src?: string; alt: string; className?: string; priority?: boolean }) {
@@ -9,7 +10,7 @@ export function Photo({ src, alt, className, priority }: { src?: string; alt: st
   return (
     // eslint-disable-next-line @next/next/no-img-element -- local static photos; next/image adds no value for these demo assets
     <img
-      src={src}
+      src={asset(src)}
       alt={alt}
       loading={priority ? "eager" : "lazy"}
       decoding="async"

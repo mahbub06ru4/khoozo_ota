@@ -6,6 +6,7 @@ import { useMemo, useRef, useState, type FormEvent } from "react";
 import { Counter } from "@/components/ui/Counter";
 import { Photo } from "@/components/ui/Photo";
 import { useApp } from "@/context/AppProvider";
+import { submitHolidayBooking } from "@/lib/api";
 import { ADD_ONS, DESTINATIONS, findDestination, MEAL_LABEL, type HolidayBooking, type HolidayConfig, type HolidayPackage, type HotelTier, type MealPlan } from "@/lib/data/holidays";
 import { quoteHoliday } from "@/lib/holiday-pricing";
 import { addDays, cn, formatDate, formatMoney, todayISO } from "@/lib/utils";
@@ -68,15 +69,15 @@ export function HolidayBuilder({ pkg, initialDestination }: { pkg?: HolidayPacka
     setSubmitting(true);
     setServerError(null);
     try {
-      const res = await fetch("/api/holidays/bookings", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ config: c, ...lead, phone: lead.phone.replace(/[\s-]/g, ""), notes: lead.notes || undefined, expectedTotal: quote.total }),
+      const booked = await submitHolidayBooking({
+        config: c,
+        ...lead,
+        phone: lead.phone.replace(/[\s-]/g, ""),
+        notes: lead.notes || undefined,
+        expectedTotal: quote.total,
       });
-      const json = await res.json();
-      if (!res.ok) throw new Error(json.error ?? "Booking failed");
-      addHolidayBooking(json.booking);
-      setBooking(json.booking);
+      addHolidayBooking(booked);
+      setBooking(booked);
       scrollToTop();
     } catch (err) {
       setServerError(err instanceof Error ? err.message : "Booking failed");

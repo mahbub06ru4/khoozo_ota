@@ -4,6 +4,7 @@ import { AlertTriangle, BadgeDollarSign, CalendarClock, Check, FileText, Graduat
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useApp } from "@/context/AppProvider";
+import { getVisaProduct } from "@/lib/api";
 import { VISA_TYPE_LABEL, type VisaCountry, type VisaType } from "@/lib/data/visas";
 import { cn, formatMoney } from "@/lib/utils";
 import type { VisaProduct } from "@/types";
@@ -23,16 +24,13 @@ export function VisaDetails({ country }: { country: VisaCountry }) {
   const [applying, setApplying] = useState<string | null>(null);
 
   useEffect(() => {
-    const ctrl = new AbortController();
-    fetch(`/api/visa/product?country=${country.code}&type=${type}&nationality=${encodeURIComponent(nationality)}`, { signal: ctrl.signal })
-      .then(async (r) => {
-        const j = await r.json();
-        setLoaded({ key, product: r.ok ? j.product : null, error: r.ok ? null : (j.error ?? "Unable to load") });
-      })
-      .catch((e) => {
-        if (!ctrl.signal.aborted) setLoaded({ key, product: null, error: e instanceof Error ? e.message : "Unable to load" });
-      });
-    return () => ctrl.abort();
+    let cancelled = false;
+    getVisaProduct(country.code, type, nationality)
+      .then((product) => !cancelled && setLoaded({ key, product, error: null }))
+      .catch((e) => !cancelled && setLoaded({ key, product: null, error: e instanceof Error ? e.message : "Unable to load" }));
+    return () => {
+      cancelled = true;
+    };
   }, [country.code, type, nationality, key]);
 
   const ready = loaded?.key === key ? loaded : null;

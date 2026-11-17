@@ -3,6 +3,8 @@ import { Suspense } from "react";
 import { VisaDetails } from "@/components/visa/VisaDetails";
 import { findVisaCountry, VISA_COUNTRIES } from "@/lib/data/visas";
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return VISA_COUNTRIES.map((c) => ({ country: c.code.toLowerCase() }));
 }

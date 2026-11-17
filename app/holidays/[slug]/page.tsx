@@ -5,6 +5,8 @@ import { HolidayBuilder } from "@/components/holidays/HolidayBuilder";
 import { Photo } from "@/components/ui/Photo";
 import { findDestination, findPackage, PACKAGES } from "@/lib/data/holidays";
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return PACKAGES.map((p) => ({ slug: p.slug }));
 }

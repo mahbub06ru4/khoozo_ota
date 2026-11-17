@@ -7,7 +7,6 @@ import { quoteHoliday } from "@/lib/holiday-pricing";
 import { addDays, todayISO } from "@/lib/utils";
 
 export const metadata: Metadata = { title: "Holiday packages" };
-export const dynamic = "force-dynamic";
 
 function fromPrice(slug: string): number {
   const p = PACKAGES.find((x) => x.slug === slug)!;

@@ -4,6 +4,7 @@ import { CheckCircle2, Loader2, Upload } from "lucide-react";
 import Link from "next/link";
 import { useState, type FormEvent } from "react";
 import { useApp } from "@/context/AppProvider";
+import { submitVisaApplication } from "@/lib/api";
 import { findVisaCountry, VISA_TYPE_LABEL } from "@/lib/data/visas";
 import { addDays, cn, formatMoney, todayISO } from "@/lib/utils";
 import type { VisaApplicant, VisaApplication, VisaProduct } from "@/types";
@@ -75,21 +76,15 @@ export function VisaApplyForm({ product }: { product: VisaProduct }) {
     }
     setSubmitting(true);
     try {
-      const res = await fetch("/api/visa/applications", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          countryCode: product.countryCode,
-          type: product.type,
-          nationality: product.nationality,
-          applicant: { ...a, phone: a.phone.replace(/[\s-]/g, ""), firstName: a.firstName.trim(), lastName: a.lastName.trim() },
-          documents: Object.keys(docs),
-        }),
+      const application = await submitVisaApplication({
+        countryCode: product.countryCode,
+        type: product.type,
+        nationality: product.nationality,
+        applicant: { ...a, phone: a.phone.replace(/[\s-]/g, ""), firstName: a.firstName.trim(), lastName: a.lastName.trim() },
+        documents: Object.keys(docs),
       });
-      const json = await res.json();
-      if (!res.ok) throw new Error(json.error ?? "Submission failed");
-      addVisaApplication(json.application);
-      setResult(json.application);
+      addVisaApplication(application);
+      setResult(application);
       window.scrollTo({ top: 0, behavior: "smooth" });
     } catch (err) {
       setServerError(err instanceof Error ? err.message : "Submission failed");

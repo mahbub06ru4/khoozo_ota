@@ -5,6 +5,8 @@ import { ResultsSkeleton } from "@/components/results/Skeletons";
 
 const KINDS = { flights: "flight", hotels: "hotel" } as const;
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return Object.keys(KINDS).map((kind) => ({ kind }));
 }
