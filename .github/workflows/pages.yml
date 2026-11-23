@@ -14,6 +14,11 @@ concurrency:
   group: pages
   cancel-in-progress: true
 
+env:
+  # Custom domain the demo is served from. Clear it to fall back to
+  # https://<user>.github.io/<repo>/ (the build then uses /<repo> as base path).
+  CUSTOM_DOMAIN: ota.khoozo.com
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -28,11 +33,19 @@ jobs:
       - name: Build static export
         run: |
           rm -rf app/api
+          if [ -n "$CUSTOM_DOMAIN" ]; then
+            export PAGES_BASE_PATH=""
+          else
+            export PAGES_BASE_PATH="/${GITHUB_REPOSITORY#*/}"
+          fi
+          echo "Base path: '${PAGES_BASE_PATH}'"
           npm run build
         env:
           STATIC_EXPORT: "1"
-          PAGES_BASE_PATH: /${{ github.event.repository.name }}
       - run: node scripts/flatten-export-segments.mjs out
+      - name: Write CNAME for custom domain
+        if: env.CUSTOM_DOMAIN != ''
+        run: echo "$CUSTOM_DOMAIN" > out/CNAME
       - run: touch out/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:
